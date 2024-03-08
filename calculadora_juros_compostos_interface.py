@@ -7,7 +7,6 @@ def calcular_valor_futuro():
         aporte_mes = float(aporte_mes_entry.get())
         rentabilidade = (((float(rentabilidade_entry.get()) / 100) +1)**(1/12) - 1)
         tempo = int(tempo_entry.get()) * 12
-        print(patrimonio, aporte_mes, rentabilidade, tempo)
 
         Fv = (aporte_mes * (((1 + rentabilidade) ** tempo - 1)) / rentabilidade) + patrimonio * (1 + rentabilidade) ** tempo
         messagebox.showinfo("Resultado", f"O valor futuro após {tempo} meses será de R${Fv:.2f}")
